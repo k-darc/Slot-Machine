@@ -2,7 +2,7 @@ import random
 
 MAX_LINES = 3
 MAX_BET = 100
-MIN_BET = 
+MIN_BET = 1
 
 ROWS = 3
 COLS = 3
@@ -31,6 +31,17 @@ def get_slot_machine_spin(rows, cols, symbols):
             column.append(value)
 
         columns.append(columns)
+
+    return columns
+
+def print_solt_machine(columns):
+    for row in range(len(columns[0])):
+        for i, column in enumerate(columns):
+            if i != len(columns) - 1:
+                print(column[row, "|"])
+            else:
+                print(column[row])
+
 
 
 
