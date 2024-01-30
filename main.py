@@ -34,15 +34,16 @@ def get_slot_machine_spin(rows, cols, symbols):
 
     return columns
 
-def print_solt_machine(columns):
+
+def print_slot_machine(columns):
     for row in range(len(columns[0])):
         for i, column in enumerate(columns):
             if i != len(columns) - 1:
-                print(column[row, "|"])
+                print(column[row], end=" | ")
             else:
-                print(column[row])
+                print(column[row], end="")
 
-
+        print()
 
 
 def deposit():
